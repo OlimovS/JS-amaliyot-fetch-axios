@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .loadPosts,
+      #loading {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading" style="display: none">
+      <h2>Loading posts...</h2>
+    </div>
+    <div class="loadPosts">
+      <button id="loadPostsBtn">Load posts</button>
+    </div>
+    <div id="posts"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
