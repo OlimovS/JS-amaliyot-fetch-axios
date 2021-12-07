@@ -6,12 +6,11 @@ const loadPostsDiv = document.getElementsByClassName("loadPosts")[0];
 loadPostsBtn.addEventListener("click", function () {
   loadingDiv.style.display = "block";
   loadPostsDiv.style.display = "none";
-  fetch("https://jsonplaceholder.typicode.com/posts")
-    .then((response) => response.json())
-    .then((posts) => {
-      loadingDiv.style.display = "none";
-      showPosts(posts);
-    });
+  //   server -> XMLHttpRequest -> [1, 2, 3] -> axios developer -> {data: [1,2,4,5]}
+  axios("https://jsonplaceholder.typicode.com/posts").then((fetchedInfos) => {
+    loadingDiv.style.display = "none";
+    showPosts(fetchedInfos.data);
+  });
 });
 
 // posts = [post]
